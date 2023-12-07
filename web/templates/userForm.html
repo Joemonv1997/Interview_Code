@@ -1,0 +1,16 @@
+{% extends "index.html" %} {% block content %} {% csrf_token %}
+<h1>User Register Form</h1>
+{% load crispy_forms_tags %}
+<div class="container align-item:center">
+  <!--Django Model Form-->
+  <h2 class="my-4">Add a new User</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %} {{user|crispy}}
+    <br />
+    <br />
+    <br />
+    <br />
+    <button class="btn btn-primary my-4" type="submit">Submit</button>
+  </form>
+  {% endblock %}
+</div>

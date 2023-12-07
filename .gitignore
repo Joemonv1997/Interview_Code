@@ -1,1 +1,4 @@
 env
+web/__pycache__
+web/migrations/__pycache__
+myweb/__pycache__
