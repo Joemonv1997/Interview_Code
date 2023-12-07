@@ -1,14 +1,11 @@
 {% extends "index.html" %} {% block content %} {% csrf_token %}
-<h1>User Register Form</h1>
+<h1>User URL Shortend Form</h1>
 {% load crispy_forms_tags %}
 <div class="container align-item:center">
   <!--Django Model Form-->
   <h2 class="my-4">Add a new URL For the User To be Shortend</h2>
-  <form method="post" enctype="multipart/form-data">
+  <form method="post" enctype="multipart/form-data" action="/short_url">
     {% csrf_token %} {{url|crispy}}
-    <br />
-    <br />
-    <br />
     <br />
     <button class="btn btn-primary my-4" type="submit">Submit</button>
   </form>

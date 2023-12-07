@@ -4,7 +4,7 @@
 <div class="justify-content-center">
   <!--Django Model Form-->
   <h2 class="my-4">Login Page for User</h2>
-  <form method="post" enctype="multipart/form-data">
+  <form method="post" enctype="multipart/form-data" ,action="/login">
     {% csrf_token %} {{user|crispy}}
     <br />
     <br />
