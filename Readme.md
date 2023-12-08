@@ -14,6 +14,12 @@ User Module [DRF]
 
 Admin Module [Django Templates]
 
+```
+Username:admin
+Password:admin
+```
+
+
 1. Super Admin login
 2. List all Users [Fullname, Email, Number of shorterned links]
 3. Admin can view user
