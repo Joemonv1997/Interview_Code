@@ -5,9 +5,6 @@ from web.models import SortendURL
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 # Create your views here.
-def index(request):
-    return HttpResponse("Welcome TO Home Page")
-
 
 def home(request):
     return render(request,"home.html")
@@ -37,12 +34,12 @@ def login_user(request):
                 login(request, user)
                 return HttpResponseRedirect("/")
             else:
-                return render(request,"userForm.html",context={"user":user})
+                return render(request,"login.html",context={"user":user})
         else:
-            render(request,"userForm.html",context={"user":user})
+            render(request,"login.html",context={"user":user})
     else:
         user = LoginForm()
-    return render(request,"userForm.html",context={"user":user})
+    return render(request,"login.html",context={"user":user})
 
 
 def url_user(request):
